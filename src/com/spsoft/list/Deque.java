@@ -1,6 +1,5 @@
 package com.spsoft.list;
-/* FIFO Queue */
-/* 1 2 3 4 5 */
+/* FIFO Double Ended Queue */
 public interface Deque<E> {
     public Node<E> addLast(E e);
     public Node<E> addLast(Node<E> node);
@@ -11,4 +10,6 @@ public interface Deque<E> {
     public E peek();
     public int size();
     public boolean isEmpty();
+    public Node<E> addFirst(E e);
+    public E removeLast();
 }

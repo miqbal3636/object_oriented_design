@@ -87,6 +87,18 @@ public class LinkedList<E> implements Deque<E> {
         return size==0;
     }
 
+    @Override
+    //needs to implement
+    public Node<E> addFirst(E e) {
+        return null;
+    }
+
+    @Override
+    //needs to implement
+    public E removeLast() {
+        return null;
+    }
+
     private E removeFirst(Node<E> f) {
         assert f == first && f != null;
         final E element = f.key;
