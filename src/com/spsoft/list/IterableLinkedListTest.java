@@ -4,6 +4,22 @@ import java.util.Iterator;
 
 public class IterableLinkedListTest {
     static IterableLinkedList<Integer> list = new IterableLinkedList<Integer>();
+    public static void printList(){
+        System.out.println("Printing the updated list...");
+        for (Integer integer : list) {
+            System.out.print(integer + " ");
+        }
+        System.out.println();
+    }
+    public static void printListUsingIterator(){
+        System.out.println("Printing the updated list...");
+        Iterator<Integer> iter = list.iterator();
+        while(iter.hasNext()){
+            System.out.print(iter.next()+" ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         list.addLast(1);
         Node<Integer> node =  list.addLast(2);
@@ -26,20 +42,6 @@ public class IterableLinkedListTest {
         printList();
 
     }
-    public static void printList(){
-        System.out.println("Printing the updated list...");
-        for (Integer integer : list) {
-            System.out.print(integer + " ");
-        }
-        System.out.println();
-    }
-    public static void printListUsingIterator(){
-        System.out.println("Printing the updated list...");
-        Iterator<Integer> iter = list.iterator();
-        while(iter.hasNext()){
-            System.out.print(iter.next()+" ");
-        }
-        System.out.println();
-    }
+
 
 }

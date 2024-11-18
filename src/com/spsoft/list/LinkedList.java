@@ -31,7 +31,7 @@ public class LinkedList<E> implements Deque<E> {
         else
             l.next = node;
         size++;
-        System.out.println("added Node valued: "+node.key +" at the end of list");
+        System.out.println("added Node valued: "+node.item +" at the end of list");
         return node;
     }
 
@@ -55,7 +55,7 @@ public class LinkedList<E> implements Deque<E> {
         if(node == first)
             first = node.next;
         size--;
-        System.out.println("removed node valued: "+node.key);
+        System.out.println("removed node valued: "+node.item);
 
     }
 
@@ -74,7 +74,7 @@ public class LinkedList<E> implements Deque<E> {
     @Override
     public E peek() {
         final Node<E> f = first;
-        return (f == null) ? null : f.key;
+        return (f == null) ? null : f.item;
     }
 
     @Override
@@ -101,7 +101,7 @@ public class LinkedList<E> implements Deque<E> {
 
     private E removeFirst(Node<E> f) {
         assert f == first && f != null;
-        final E element = f.key;
+        final E element = f.item;
         final Node<E> next = f.next;
         first = next;
         if (next == null)
@@ -109,7 +109,7 @@ public class LinkedList<E> implements Deque<E> {
         else
             next.prev = null;
         size--;
-        System.out.println("removed node valued: "+f.key +" from the start of the list");
+        System.out.println("removed node valued: "+f.item +" from the start of the list");
         return element;
     }
 }
