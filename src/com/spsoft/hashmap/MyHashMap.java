@@ -25,6 +25,7 @@ public class MyHashMap {
     public void put(int key, int value) {
         int index = hash(key);
         Node node = bucket[index];
+        //insert the node if it does not exist in the buckets.
         if (node == null) {
             bucket[index] = new Node(key, value);
             return;
@@ -38,6 +39,7 @@ public class MyHashMap {
             prev = node;
             node = node.next;
         }
+        //insert new node at the end of the list
         prev.next = new Node(key, value);
     }
 
